@@ -1,0 +1,32 @@
+
+<div class="container my-4">
+    <h1 class="text-center display-4 heading">Notes App</h1>
+   
+    <form action="" [formGroup]="notesForm" class="my-4" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="title" class="form-label"> Notes Title </label>
+            <input type="text" class="form-control" id="title" placeholder="enter title" formControlName="title">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Write your notes </label>
+            <textarea class="form-control" id="description" rows="15" placeholder="write your text here...."
+                formControlName="desc"></textarea>
+        </div>
+        <div class="mb-3" *ngIf="success">
+            <div class="alert alert-success d-flex align-items-center" role="alert">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                    <use xlink:href="#check-circle-fill" />
+                </svg>
+                <div>
+                    {{suceessMsg}}
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mb-3">Add Notes</button>
+
+      
+
+    </form>
+</div>
+
+<app-notes-item [notesObj]="myservice.notes"></app-notes-item>
