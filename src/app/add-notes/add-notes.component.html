@@ -1,15 +1,15 @@
 
-<div class="container my-4">
+<div class="container my-4 myapp">
     <h1 class="text-center display-4 heading">Notes App</h1>
    
-    <form action="" [formGroup]="notesForm" class="my-4" (ngSubmit)="onSubmit()">
+    <form action="" [formGroup]="notesForm" class="my-4 notes-form" (ngSubmit)="onSubmit()">
         <div class="mb-3">
-            <label for="title" class="form-label"> Notes Title </label>
+            <label for="title" class="form-label  fw-bold"> Notes Title </label>
             <input type="text" class="form-control" id="title" placeholder="enter title" formControlName="title">
         </div>
         <div class="mb-3">
-            <label for="description" class="form-label">Write your notes </label>
-            <textarea class="form-control" id="description" rows="13" placeholder="write your text here...."
+            <label for="description" class="form-label fw-bold">Notes description </label>
+            <textarea class="form-control" id="description" rows="8" placeholder="write your text here...."
                 formControlName="desc"></textarea>
         </div>
         <div class="mb-3" *ngIf="success">

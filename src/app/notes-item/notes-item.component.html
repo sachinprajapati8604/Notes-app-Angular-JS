@@ -5,7 +5,7 @@
     <h2 class="my-4 title"> You have total Notes {{notesObj.length}}</h2>
     <div class="row row-cols-1 row-cols-lg-2 g-lg-3 g-2">
         <div class="col" *ngFor="let data of notesObj | filter:searchKey; let i=index">
-            <div class="card text-dark bg-light mb-3 h-100">
+            <div class="card  mb-3 h-100">
                 <div class="card-body">
                     <h5>{{data.title}}</h5>
                     <p class="card-text">{{data.desc}}</p>

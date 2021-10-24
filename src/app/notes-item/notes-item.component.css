@@ -1,5 +1,11 @@
+
 .card {
   border-left: 3px solid green;
+}
+.col:nth-child(odd) .card{  
+  background-color: forestgreen;
+  color: blanchedalmond;
+  border-left: 3px solid dodgerblue;
 }
 
 .card:hover {
