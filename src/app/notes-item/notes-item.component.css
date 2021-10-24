@@ -1,11 +1,18 @@
-
 .card {
-  border-left: 3px solid green;
+  border-radius: 20px;
+  position: relative;
+  background-size: 100%;
 }
-.col:nth-child(odd) .card{  
-  background-color: forestgreen;
+.col:nth-child(odd) .card {
+  background: linear-gradient(
+    66deg,
+    rgba(159, 194, 252, 1) 0%,
+    rgba(170, 138, 234, 1) 100%
+  );
   color: #fff;
-  border-left: 3px solid dodgerblue;
+}
+.col:nth-child(even) .card{
+  background-color: #feecf5;
 }
 
 .card:hover {
@@ -14,8 +21,8 @@
   cursor: pointer;
 }
 
-.title{
-    border-left: 3px solid green; 
-    padding: 10px;
-    color: dodgerblue;
+.title {
+  border-left: 3px solid green;
+  padding: 10px;
+  color: dodgerblue;
 }
